@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Octalink Network | Security & Networking</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand-area">
+        <a class="brand" href="#home" aria-label="Octalink Network home">
+          <span class="brand-mark has-logo" id="brandMark">
+            <img class="brand-logo" src="assets/octalink-logo.png" alt="Octalink Network logo" />
+          </span>
+          <span>
+            <strong>Octalink Network</strong>
+            <small>Security, networking, products</small>
+          </span>
+        </a>
+        <label class="logo-upload">
+          Upload logo
+          <input id="logoUpload" type="file" accept="image/*" />
+        </label>
+      </div>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="#services">Services</a>
+        <a href="#products">Products</a>
+        <a href="#estimate">Estimator</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="call-button" href="tel:+919999999999" aria-label="Call Octalink Network">
+        <span aria-hidden="true">TEL</span>
+        Call now
+      </a>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="hero-copy">
+          <p class="eyebrow">CCTV installation, computer networking, and smart office products</p>
+          <h1>Octalink Network</h1>
+          <p>
+            Plan, quote, and request professional installation for cameras, Wi-Fi, LAN, access
+            control, printers, and essential IT products from one clean workspace.
+          </p>
+          <div class="hero-actions">
+            <a class="primary-action" href="#estimate">Build estimate</a>
+            <a class="secondary-action" href="#services">View services</a>
+          </div>
+        </div>
+        <figure class="hero-media" aria-label="Security camera and network control room visual">
+          <img src="assets/hero-network.png" alt="CCTV camera and network equipment dashboard" />
+        </figure>
+      </section>
+
+      <section class="metrics" aria-label="Business highlights">
+        <article>
+          <strong>24 hr</strong>
+          <span>Site survey response</span>
+        </article>
+        <article>
+          <strong>HD/IP</strong>
+          <span>Camera systems</span>
+        </article>
+        <article>
+          <strong>LAN/Wi-Fi</strong>
+          <span>Structured networks</span>
+        </article>
+        <article>
+          <strong>AMC</strong>
+          <span>Support plans</span>
+        </article>
+      </section>
+
+      <section class="section" id="services">
+        <div class="section-heading">
+          <p class="eyebrow">What Octalink handles</p>
+          <h2>Services built for homes, shops, offices, and sites</h2>
+        </div>
+        <div class="service-grid">
+          <article class="service-card">
+            <span class="icon camera-icon" aria-hidden="true"></span>
+            <h3>CCTV Installation</h3>
+            <p>IP, HD, dome, bullet, PTZ, DVR/NVR setup, mobile viewing, storage planning.</p>
+            <button class="mini-button" data-service="CCTV Installation">Select</button>
+          </article>
+          <article class="service-card">
+            <span class="icon network-icon" aria-hidden="true"></span>
+            <h3>Computer Networking</h3>
+            <p>LAN cabling, rack dressing, switches, routers, Wi-Fi access points, testing.</p>
+            <button class="mini-button" data-service="Computer Networking">Select</button>
+          </article>
+          <article class="service-card">
+            <span class="icon shield-icon" aria-hidden="true"></span>
+            <h3>Security Systems</h3>
+            <p>Biometric attendance, access control, video door phones, alarms, and sensors.</p>
+            <button class="mini-button" data-service="Security Systems">Select</button>
+          </article>
+          <article class="service-card">
+            <span class="icon device-icon" aria-hidden="true"></span>
+            <h3>IT Products</h3>
+            <p>Computers, printers, UPS, cables, connectors, storage devices, and accessories.</p>
+            <button class="mini-button" data-service="IT Products">Select</button>
+          </article>
+        </div>
+      </section>
+
+      <section class="section split" id="products">
+        <div>
+          <p class="eyebrow">Product catalog</p>
+          <h2>Fast recommendations for common needs</h2>
+          <p class="muted">
+            Filter by category and pick items for your request. Prices are indicative and can be
+            replaced with your real rates whenever you are ready.
+          </p>
+          <div class="filter-row" role="tablist" aria-label="Product category">
+            <button class="filter active" data-filter="all" role="tab" aria-selected="true">All</button>
+            <button class="filter" data-filter="cctv" role="tab" aria-selected="false">CCTV</button>
+            <button class="filter" data-filter="network" role="tab" aria-selected="false">Network</button>
+            <button class="filter" data-filter="it" role="tab" aria-selected="false">IT</button>
+          </div>
+        </div>
+        <div class="product-list" id="productList" aria-live="polite"></div>
+      </section>
+
+      <section class="section estimator" id="estimate">
+        <div class="section-heading">
+          <p class="eyebrow">Quick project estimator</p>
+          <h2>Create a starter quote</h2>
+        </div>
+        <div class="estimate-layout">
+          <form class="quote-form" id="quoteForm">
+            <label>
+              Project type
+              <select id="projectType">
+                <option value="Home">Home</option>
+                <option value="Shop">Shop</option>
+                <option value="Office">Office</option>
+                <option value="Warehouse">Warehouse</option>
+              </select>
+            </label>
+            <label>
+              Cameras
+              <input id="cameraCount" type="number" min="0" max="64" value="4" />
+            </label>
+            <label>
+              Network points
+              <input id="networkPoints" type="number" min="0" max="128" value="8" />
+            </label>
+            <label>
+              Wi-Fi access points
+              <input id="wifiPoints" type="number" min="0" max="24" value="2" />
+            </label>
+            <label>
+              Support plan
+              <select id="supportPlan">
+                <option value="Basic">Basic support</option>
+                <option value="Priority">Priority AMC</option>
+                <option value="Premium">Premium AMC</option>
+              </select>
+            </label>
+          </form>
+          <aside class="quote-panel" aria-live="polite">
+            <span class="panel-label">Estimated project range</span>
+            <strong id="estimateTotal">Rs 0</strong>
+            <p id="estimateSummary">Adjust the options to prepare a starter quotation.</p>
+            <button class="primary-action" id="copyEstimate" type="button">Copy estimate</button>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section contact" id="contact">
+        <div>
+          <p class="eyebrow">Send an enquiry</p>
+          <h2>Book a survey or request product pricing</h2>
+          <p class="muted">
+            Replace the sample phone number and address in the code with your official details.
+          </p>
+          <div class="contact-lines">
+            <span>Phone: +91 99999 99999</span>
+            <span>Email: hello@octalinknetwork.com</span>
+            <span>Service area: Homes, shops, offices, and commercial sites</span>
+          </div>
+        </div>
+        <form class="lead-form" id="leadForm">
+          <label>
+            Name
+            <input id="customerName" autocomplete="name" required placeholder="Customer name" />
+          </label>
+          <label>
+            Phone
+            <input id="customerPhone" autocomplete="tel" required placeholder="Mobile number" />
+          </label>
+          <label>
+            Requirement
+            <textarea id="requirement" rows="4" placeholder="CCTV, networking, products, AMC"></textarea>
+          </label>
+          <button class="primary-action" type="submit">Prepare enquiry</button>
+          <p class="form-status" id="formStatus" role="status"></p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>Octalink Network</span>
+      <span>CCTV | Networking | Security | IT Products</span>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
